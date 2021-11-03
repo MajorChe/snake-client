@@ -5,7 +5,9 @@ const connect = function () {
     port: 50541
     });
     conn.on('connect', () => {
-    conn.write('Name: MAJ');
+      console.log("Successfully connected to the game server. connectHandlerCallback");
+      conn.write('Name: MAJ');  // name is assigned to the snake
+      //conn.write("Move: up");
     });
   // interpret incoming data as text
   conn.setEncoding("utf8");
