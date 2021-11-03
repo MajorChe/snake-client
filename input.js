@@ -16,6 +16,8 @@ const setupInput = function (inputValue) {
       connection.write('Move: down');
     } else if (key === 'd') {
       connection.write('Move: right');
+    } else if (key === 'c') {
+      connection.write('Say: Coming');
     }
   };
   stdin.on("data", handleUserInput);
